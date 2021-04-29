@@ -12,6 +12,7 @@ const AddUser = (props) => {
     event.preventDefault();
     if (userName.trim().length === 0 || age.trim().length === 0) return;
     if (+age.trim() < 1 || +age.trim() > 120) return;
+    props.appUsersHandler({ id: Math.random(), name: userName, age });
     setUserName('');
     setAge('');
   }
