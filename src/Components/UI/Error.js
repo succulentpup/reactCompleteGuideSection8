@@ -6,7 +6,7 @@ import styledClasses from './Error.module.css';
 const Error = (props) => {
   return (
     <div>
-      <div className={styledClasses.backdrop} onClick={props.onClick}>
+      <div className={styledClasses.backdrop} onClick={props.onConfirm}>
         <Card className={styledClasses.modal}>
           <header className={styledClasses.header}>
             <h2>{props.title}</h2>
@@ -15,7 +15,7 @@ const Error = (props) => {
             <p>{props.message}</p>
           </div>
           <footer className={styledClasses.actions}>
-            <Button type='button' onClick={props.onClick}>Okey</Button>
+            <Button type='button' onClick={props.onConfirm}>Okey</Button>
           </footer>
         </Card>
       </div>
